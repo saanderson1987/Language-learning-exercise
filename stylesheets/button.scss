@@ -1,0 +1,37 @@
+@import 'animation';
+
+.hw-form-button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 7px 21px;
+  color: $buttonColorEnabled;
+  background-color: $buttonBackgroundEnabled;
+  border: 2px $buttonBackgroundEnabled solid;
+}
+
+.hw-form-button:hover {
+  cursor: pointer;
+  background-color: $mainTextBackground;
+  color: $black;
+}
+
+.hw-form-button--enable-button-anim {
+  @include enable-button-anim;
+}
+
+.hw-form-button--disabled {
+  color: #b9b5b5;
+  background-color: #e4e4e4;
+  border: 2px #e4e4e4 solid;
+}
+
+.hw-form-button--disabled:hover {
+  cursor: default;
+  color: #b9b5b5;
+  background-color: #e4e4e4;
+}
+
+.hw-form-button--disabled:active {
+  @include click-on-disabled-button;
+}
